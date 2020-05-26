@@ -23,7 +23,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'git pull https://$(VSTSToken)@dev.azure.com/hyneskhater/ADM.Portfolio/_git/HK.oqtane.framework.git -u --all'
+    script: 'git pull https://$(VSTSToken)@dev.azure.com/hyneskhater/ADM.Portfolio/_git/HK.oqtane.framework.git --all'
 
 - task: CmdLine@2
   inputs:
