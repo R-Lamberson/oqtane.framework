@@ -23,4 +23,4 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'git push https://$(VSTSToken)@hyneskhater/ADM.Portfolio/_git/HK.oqtane.framework.git -u --all'
+    script: 'git push https://$(VSTSToken)@dev.azure.com/hyneskhater/ADM.Portfolio/_git/HK.oqtane.framework.git -u --all'
