@@ -32,7 +32,7 @@ else
                         <label for="Name" class="control-label">Password: </label>
                     </td>
                     <td>
-                        <input type="password" class="form-control" @bind="@password" />
+                        <input type="password" class="form-control" @bind="@password" autocomplete="new-password" />
                     </td>
                 </tr>
                 <tr>
@@ -40,7 +40,7 @@ else
                         <label for="Name" class="control-label">Confirm Password: </label>
                     </td>
                     <td>
-                        <input type="password" class="form-control" @bind="@confirm" />
+                        <input type="password" class="form-control" @bind="@confirm" autocomplete="new-password" />
                     </td>
                 </tr>
                 <tr>
@@ -73,7 +73,7 @@ else
         }
     </TabPanel>
     <TabPanel Name="Profile">
-        @if (profiles != null)
+        @if (profiles != null && settings != null)
         {
             <table class="table table-borderless">
                 @foreach (Profile profile in profiles)
@@ -111,8 +111,8 @@ else
             {
                 <Pager Items="@notifications">
                     <Header>
-                        <th>&nbsp;</th>
-                        <th>&nbsp;</th>
+                        <th style="width: 1px;">&nbsp;</th>
+                        <th style="width: 1px;">&nbsp;</th>
                         <th>From</th>
                         <th>Subject</th>
                         <th>Received</th>
@@ -126,7 +126,16 @@ else
                     </Row>
                     <Detail>
                         <td colspan="2"></td>
-                        <td colspan="3">@(context.Body.Length > 100 ? context.Body.Substring(0, 100) : context.Body)</td>
+                        <td colspan="3">
+                            @{ 
+                            string input = "___";
+                            if (context.Body.Contains(input)){ 
+                            context.Body = context.Body.Split(input)[0];
+                            context.Body = context.Body.Replace("\n", "");
+                            context.Body = context.Body.Replace("\r", "");
+                            } }
+                            @(context.Body.Length > 100 ? (context.Body.Substring(0, 97) + "...") : context.Body)
+                        </td>
                     </Detail>
                 </Pager>
             }
@@ -149,7 +158,16 @@ else
                     </Row>
                     <Detail>
                         <td colspan="2"></td>
-                        <td colspan="3">@(context.Body.Length > 100 ? context.Body.Substring(0, 100) : context.Body)</td>
+                        <td colspan="3">
+                            @{ 
+                            string input = "___";
+                            if (context.Body.Contains(input)){ 
+                            context.Body = context.Body.Split(input)[0];
+                            context.Body = context.Body.Replace("\n", "");
+                            context.Body = context.Body.Replace("\r", "");
+                            } }
+                            @(context.Body.Length > 100 ? (context.Body.Substring(0, 97) + "...") : context.Body)
+                        </td>
                     </Detail>
                 </Pager>
             }

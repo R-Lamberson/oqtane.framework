@@ -9,7 +9,7 @@ Please note that this project is owned by the .NET Foundation and is governed by
 
 **To get started with Oqtane:**
 
-   1.&nbsp;Install **[.NET Core 3.2 SDK (v3.1.300)](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.300-windows-x64-installer)**.
+   1.&nbsp;Install **[.NET Core 3.1 SDK (v3.1.300)](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.300-windows-x64-installer)**.
    
    2.&nbsp;Install the Preview edition of [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) (version 16.6 or higher) with the **ASP.NET and web development** workload enabled. Oqtane works with all editions of Visual Studio from Community to Enterprise. If you do not have a SQL Server installation available already and you wish to use LocalDB for development, you must also install the **.NET desktop development workload**.  
 
@@ -87,7 +87,7 @@ Control panel for adding, editing, and deleting pages as well as adding new modu
 
 ![Manage Page](https://github.com/oqtane/framework/blob/master/screenshots/screenshot5.png?raw=true "Manage Page")
 
-Admin dashboard for accessing the variuous administrative features of the framework:
+Admin dashboard for accessing the various administrative features of the framework:
 
 ![Admin Dashboard](https://github.com/oqtane/framework/blob/master/screenshots/screenshot6.png?raw=true "Admin Dashboard")
 
